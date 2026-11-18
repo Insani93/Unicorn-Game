@@ -1,0 +1,21 @@
+UNICORN MAGIC WORLD v2 — UPDATE FROM SAMSUNG
+
+IF YOU HAVE NOT UPLOADED VERSION 1:
+1. Extract this ZIP with Samsung My Files.
+2. Create a Public GitHub repository named unicorn-magic-world.
+3. Upload ALL extracted files to the root of the repository (index.html must be at root).
+4. Settings > Pages > Deploy from a branch > main > /(root) > Save.
+5. Open your GitHub Pages URL in Samsung Chrome; tap ⋮ > Add to Home Screen / Install app.
+
+IF YOU ALREADY HAVE VERSION 1 ON GITHUB:
+1. In the existing repository tap Add file > Upload files in Chrome Desktop site mode.
+2. Upload all files from this ZIP (not the ZIP itself), overwriting same-named files; add the 6 NEW lulu_*.png assets.
+3. Commit changes. Keep existing repository URL and Pages settings.
+4. Refresh browser/app after GitHub Pages deployment. Some devices cache the former version.
+5. Existing local progress is intended to remain when website origin/storage is unchanged; clearing website storage resets progress.
+
+NOTES:
+- Game is offline-friendly once hosted over HTTPS and cached.
+- English/Indonesian voice uses device speech synthesis and may depend on voice pack availability.
+- Five story worlds still show Coming soon; v2 updates the character visuals, app icon, and home atmosphere while keeping six Rainbow Meadow missions and full 0-20 / A-Z Free Play.
+- Everything can be managed from an Android Samsung phone.
