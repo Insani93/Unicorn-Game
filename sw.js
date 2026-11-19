@@ -1,5 +1,5 @@
 // Unicorn Magic World: offline shell. Change CACHE version to refresh installations.
-const CACHE='unicorn-magic-v6-1-smooth-audio-20261119';
+const CACHE='unicorn-magic-v6-2-learning-20261119';
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./meadow.webp','./lulu_happy.png','./lulu_excited.png','./lulu_curious.png','./lulu_thinking.png','./lulu_encouraging.png','./lulu_celebrating.png','./grape.svg','./rainbow_meadow_theme.mp3','./enchanted_garden_theme.mp3','./starry_sky_island_theme.mp3','./cloud_castle_theme.mp3','./moonlight_forest_theme.mp3','./rainbow_crystal_palace_theme.mp3'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));

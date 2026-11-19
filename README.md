@@ -1,32 +1,30 @@
-# Unicorn Magic World — v6.1 · Smooth Tap, Pop & Speak
+# Unicorn Magic World — v6.2 (Samsung & iOS PWA)
 
-## What changed
-- Tap a letter to hear **the letter name**, wait **two seconds after the speech ends**, hear the same letter again, wait another **two seconds**, then hear **its English object word**. Example: **G → 2 seconds → G → 2 seconds → Grape**.
-- The letter grows, changes color and glows. The object appears with a soft bounce when its name is spoken.
-- Tap a number: **three → pause → three → pause → three stars**. Zero ends with **Empty basket**.
-- No “Letter” or “Number” prefix is spoken by the touch-to-learn interaction.
-- All A–Z / 0–20 Free Play items and Story Adventure introduction stages use the new sequence. Quiz feedback remains brief.
-- A new hand-drawn grapes illustration (`grape.svg`) appears for G.
-- **Voice Studio**, English First + Indonesian Support, six original world music tracks, the approved Lulu art and all 47 Story Adventure missions are retained.
-- A second tap restarts the teaching sequence; navigating away cancels old speech/timers so lines don't overlap.
+## What's new in v6.2
+- **No duplicate letter label beneath the main letter card.** Tap a letter and the same large card shows **uppercase G**, then **lowercase g**, then **Grapes** with an animated illustration. The shapes do **not** appear together.
+- English speech is **G → [pause] → G → [pause] → Grapes**. The wait is **1.5 seconds after each spoken word completes**, not from its start. The spoken letter name is the same for capital and lowercase; neither “letter” nor “number” is spoken as a prefix when touching the symbol.
+- Tap the main letter card again (including the final object card) to replay the whole sequence.
+- Number cards speak twice, wait 1.5 seconds each, then show and name the corresponding quantity. Counting individual stars reveals and lights a numeral as it is spoken.
+- **Positive, varied feedback** (Excellent!, Good job!, Amazing!, etc.) on correct quiz answers and completed counting, plus gentle encouragement and an optional highlighted answer after repeated difficulty.
+- **More lively but gentle ambience**: clouds drift, butterflies move, flowers sway, tiny sparkles, colored world backgrounds and animated Lulu scenes. Reduced motion system preference respected.
+- Existing Story Adventure (47 missions), Numbers 0–20, Alphabet A–Z, six musical worlds, approved Lulu PNGs, voice selection, English First + Indonesian Support, and local learning progress are retained.
 
-## Important audio note
-- The game still uses **Samsung/Chrome Text-to-Speech**, not recorded human speech. Pacing and animation are improved, but how natural a voice sounds still depends on voices installed on the Samsung.
-- During the 2-second pauses, the app should not play another word. Wait through the sequence to hear the object's name.
-- Choose a voice under Parent Corner > Voice Studio; test the English voices. If very unnatural, a later revision could replace TTS with *licensed / self-recorded* speech audio clips.
-- On Android, TTS completion callbacks can vary by device; there is a conservative fallback if they aren't delivered.
+## Updating from Samsung — no laptop or paid subscription
+1. Download `Unicorn_Magic_World_Samsung_v6_2.zip` and **extract** it in **My Files**.
+2. Open your existing GitHub game repository from Chrome on Samsung. Sign in, select the publishing branch (normally `main`).
+3. Choose **Add file → Upload files** (enable Chrome Desktop site if necessary).
+4. Upload **the files inside the extracted folder**, not the ZIP itself. Keep `index.html`, `sw.js`, `manifest.webmanifest`, six Lulu PNG files, six MP3 files, `grape.svg`, `meadow.webp`, and both app icons **in the root of the repository**.
+5. If files have the same name/path, upload them using those exact names so GitHub replaces the earlier version. Then **Commit changes** to the branch used by GitHub Pages.
+6. Open the GitHub Pages URL online in Chrome and refresh. Then close/reopen the home-screen app. If an older version persists, refresh the GitHub Pages page again; service workers may take a little time to update. **Do not erase site data** as this may delete the child's locally stored progress.
 
-## How to update on Samsung
-1. Download this ZIP and extract it using My Files > Downloads.
-2. Open your existing GitHub repository in Samsung Chrome. Use Desktop site if GitHub's upload controls aren't visible.
-3. From the repository root: **Add file → Upload files**. Select **all 21 files inside the ZIP**, not the ZIP file itself.
-4. Keep `index.html`, `sw.js`, `grape.svg`, MP3s, icons and Lulu images in the **same root directory**. File names must not be changed.
-5. Commit directly to `main` (or the branch configured for GitHub Pages) to overwrite the existing files.
-6. Open the GitHub Pages URL online in Chrome and reload. Then relaunch the home-screen game; PWA cache has a new version.
-7. Test **Free Play → Magic Alphabet → G**. You should hear **G, G, Grape** separated by 2-second pauses, with letter and grape animations.
-8. Test **Free Play → Magic Numbers → 3**. You should hear **three, three, three stars**.
+## Test steps
+- Free Play → Alphabet → G: G large, then g, then Grapes illustration; no extra G under the large card. Tap the grapes illustration to repeat. Test A as well.
+- Free Play → Numbers → 3: tap three stars one at a time and watch 1, 2, 3 light up with corresponding audio, followed by variable praise.
+- Try a wrong answer in Find the letter → hear encouraging feedback; answer correctly → hear applause/praise.
+- Listen to the six different world themes; test Lulu's selected voice in Parent Corner → Voice Studio.
 
-Do not clear site data: this can delete locally stored learning progress.
-
-## Limitations
-Animations have a reduced-motion accessibility fallback. Actual TTS behavior and audio smoothness must be tested on a physical Samsung phone. Six world music themes are included for offline caching after a successful initial load. No ads, account, analytics or subscription.
+## Notes
+- Game is free, no ads, no account, no online child-data collection.
+- Sound timbre still depends on voices installed on your Samsung; this release improves speech timing and visuals but **does not replace synthetic TTS with human recordings**.
+- The new background animations are CSS and work offline once game assets are cached. No online assets are required during play.
+- Some world scenes beyond Rainbow Meadow remain stylized/illustrative rather than fully illustrated final maps.

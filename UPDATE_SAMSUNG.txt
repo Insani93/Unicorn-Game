@@ -1,7 +1,1 @@
-UPDATE UNICORN MAGIC WORLD v6.1
-1. Extract ZIP in My Files.
-2. Open GitHub repository > Add file > Upload files.
-3. Upload every extracted file (including new grape.svg) into repository root and commit to main.
-4. Reload GitHub Pages URL in Chrome, then reopen home-screen app.
-5. Test A-Z > G: G, pause 2s, G, pause 2s, Grape; fruit appears.
-Keep browser site data to preserve progress.
+Update v6.2: Extract ZIP → GitHub repository root → Add file → Upload files (replace same names) → Commit changes on main → reopen GitHub Pages online, refresh and relaunch app. Do not clear site data.
