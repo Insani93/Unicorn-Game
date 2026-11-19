@@ -1,10 +1,1 @@
-UNICORN MAGIC WORLD v5 — SIX WORLD MUSIC
-
-1. Download and extract ZIP using Samsung My Files.
-2. Open your GitHub game repository in Chrome.
-3. Add file -> Upload files -> select ALL extracted files (not the ZIP).
-4. Replace files where needed, commit changes.
-5. Reload the game. Do NOT clear browser site data/progress.
-6. Tap Play Adventure > Explore All Worlds > 🎵 Hear theme.
-7. Number or letter Free Play now automatically changes music to match its world.
-8. Worlds 2–6 story missions are not playable yet. Themes are previewable.
+Unicorn Magic World v6: Extract ZIP -> GitHub repo -> Add file > Upload files -> select ALL files -> Commit changes on main -> reopen GitHub Pages in Chrome and refresh -> reopen Samsung PWA. Do not clear site data (progress). All 6 worlds now have playable missions.

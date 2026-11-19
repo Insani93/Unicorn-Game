@@ -1,5 +1,5 @@
 // Unicorn Magic World: offline shell. Change CACHE version to refresh installations.
-const CACHE='unicorn-magic-v5-sixworlds-20261118';
+const CACHE='unicorn-magic-v6-adventure-20261119';
 const FILES=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./meadow.webp','./lulu_happy.png','./lulu_excited.png','./lulu_curious.png','./lulu_thinking.png','./lulu_encouraging.png','./lulu_celebrating.png','./rainbow_meadow_theme.mp3','./enchanted_garden_theme.mp3','./starry_sky_island_theme.mp3','./cloud_castle_theme.mp3','./moonlight_forest_theme.mp3','./rainbow_crystal_palace_theme.mp3'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting()));
@@ -9,7 +9,9 @@ self.addEventListener('activate',event=>{
 });
 self.addEventListener('fetch',event=>{
  if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;
- event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(res=>{
- if(res.ok){const copy=res.clone();caches.open(CACHE).then(c=>c.put(event.request,copy))}return res
- }).catch(()=>event.request.mode==='navigate'?caches.match('./index.html'):Response.error())));
+ if(event.request.mode==='navigate'){
+  event.respondWith(fetch(event.request).then(res=>{if(res.ok){const copy=res.clone();caches.open(CACHE).then(c=>c.put(event.request,copy));}return res;}).catch(()=>caches.match('./index.html')));
+ }else{
+  event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(res=>{if(res.ok){const copy=res.clone();caches.open(CACHE).then(c=>c.put(event.request,copy))}return res}).catch(()=>Response.error())));
+ }
 });

@@ -1,31 +1,39 @@
-# Unicorn Magic World — Samsung v5 | Six World Music Themes
+# Unicorn Magic World — v6 · Full Story Adventure + Tap Pop Speak
 
-## New music
-All six worlds now have **different original instrumental themes** with the warm, uplifting, sing-along character approved for Rainbow Meadow. The existing Rainbow Meadow sing-along track is unchanged.
+## What's new
+- All SIX Story Adventure worlds are now playable, not only Rainbow Meadow.
+- Curriculum integrated into stories: **numbers 0–20** and **letters A–Z**, with 47 replayable missions.
+- Tap a letter/number to make it enlarge/change color and hear its English pronunciation. Touch a picture to hear its word.
+- Every world preserves its own background music. English First + Indonesian help, Parent Voice Studio, Free Play, and prior progress remain.
+- No ads, account, analytics, paid service or app-store publishing.
 
-1. Rainbow Meadow — Happy Sing-Along (original approved v4 theme)
-2. Enchanted Garden — Garden Playtime (acoustic strum, gentle flute)
-3. Starry Sky Island — Twinkling Sky (sparkling bells)
-4. Cloud Castle — Cloud Carousel (soft kalimba, light bells)
-5. Moonlight Forest — Moonlight Lullaby (calm flute and warm pad)
-6. Rainbow Crystal Palace — Rainbow Celebration (bouncy piano and light claps)
+## World content
+1. Rainbow Meadow — 0–3 and A–C (six original missions plus Zero)
+2. Enchanted Garden — 4–6 and D–G
+3. Starry Sky Island — 7–10 and H–L
+4. Cloud Castle — 11–14 and M–Q
+5. Moonlight Forest — 15–17 and R–V
+6. Rainbow Crystal Palace — 18–20 and W–Z
 
-## How music works
-- Opening and completed story missions in Rainbow Meadow keep the approved Rainbow Meadow music.
-- Open **Explore All Worlds** and tap **🎵 Hear theme** under any world to hear its soundtrack, including worlds not yet playable.
-- In **Free Play**, choosing numbers 4–6 plays Enchanted Garden, 7–10 Starry Sky Island, 11–14 Cloud Castle, 15–17 Moonlight Forest, 18–20 Crystal Palace. Letters switch themes based on their world groups too.
-- Story content in worlds 2–6 is not yet implemented. No false claim that those stories are playable.
-- Music loops, automatically lowers during narration, pauses when the app is hidden, and is locally cached for offline play. Play permission starts after the first tap.
-- Parent Corner allows toggling music or changing volume Soft/Normal/Louder.
-- All compositions are newly authored and synthesized for this project; no copyrighted song melody, recording, or lyrics have been copied.
+## Notes about polish
+- World 2–6 are playable guided micro-adventures with number and letter animations; their location backgrounds use simple colorful panels for now rather than finished full-screen storybook illustrations.
+- Speech uses Samsung/Chrome device text-to-speech (not human voice recordings), so pronunciation and voice naturalness depend on the installed voices and Internet/voice packages.
+- Number lessons for 11–20 support touching every item. Parent may help a young child with longer counts.
+- Completion means a mission was played to completion, not a scientific measure of mastery.
 
-## Update from your Samsung phone
-1. Download **Unicorn_Magic_World_Samsung_v5_Six_World_Music.zip**.
-2. Extract it in Samsung My Files / File Saya.
-3. Open the existing repository in Chrome: GitHub > Add file > Upload files.
-4. Upload **all extracted files (not the ZIP)** into the repository root, including 6 `.mp3` tracks, `index.html`, and `sw.js`.
-5. Confirm overwrite/replace same-name files and commit the changes.
-6. Reopen/reload your GitHub Pages PWA. Old offline caches may take one or two reloads to update.
-7. To test: Play Adventure > Explore All Worlds > tap 🎵 Hear theme. All 6 music tracks can be heard without unlocking a world.
+## Update using Samsung Android, free via GitHub
+1. Download ZIP and extract in My Files > Downloads.
+2. Open your existing GitHub repository in Samsung Chrome (Desktop site if needed).
+3. Add file > Upload files, choose all files INSIDE this ZIP (not the ZIP itself).
+4. Upload to repository root, overwriting existing files with identical names.
+5. Commit changes to main. Do not delete or clear website data; this could remove saved progress.
+6. Open the GitHub Pages game address in Chrome, refresh once or twice, then reopen the home-screen PWA. GitHub Pages deployment/caching may delay changes.
+7. Choose Play Adventure > Explore All Worlds. All six worlds now open directly.
 
-Important: Do not delete site data just to update the game; that may erase locally saved learning progress. GitHub Pages on the Free plan uses a public repository, so never upload personal child data.
+### Troubleshooting
+- If world 2–6 still say Coming soon, the old cached index.html may be running. Reload Chrome GitHub Pages while online, close PWA and reopen.
+- If music/voices aren't heard: tap the game once (browser autoplay restriction), enable audio in Parent Corner, and check Samsung's installed English voice packs.
+- If you have not uploaded `sw.js` or the six MP3s, offline mode / world music may fail.
+
+### Files
+`index.html`, `sw.js`, `manifest.webmanifest`, `icon-*.png`, `meadow.webp`, Lulu poses and six music themes. Upload all files at the same folder level.
