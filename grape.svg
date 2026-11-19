@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Purple grapes with a green leaf">
+<defs>
+ <radialGradient id="berry" cx="30%" cy="20%" r="85%"><stop offset="0" stop-color="#f4c2fb"/><stop offset=".4" stop-color="#b46bda"/><stop offset="1" stop-color="#7744ba"/></radialGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b2f5a0"/><stop offset="1" stop-color="#49b968"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#79509e" flood-opacity=".25"/></filter>
+</defs>
+<g stroke-linejoin="round" stroke-linecap="round" filter="url(#shadow)">
+<path d="M93 47 Q103 34 120 23" fill="none" stroke="#668c43" stroke-width="8"/>
+<path d="M108 42 Q134 4 179 21 Q164 60 119 59Z" fill="url(#leaf)" stroke="#66b85e" stroke-width="3"/>
+<path d="M121 49Q142 35 169 27" fill="none" stroke="#d5ffc5" stroke-width="3"/>
+<g fill="url(#berry)" stroke="#f6d9ff" stroke-width="3">
+<circle cx="77" cy="65" r="23"/><circle cx="113" cy="67" r="23"/><circle cx="146" cy="73" r="22"/>
+<circle cx="59" cy="101" r="22"/><circle cx="95" cy="102" r="24"/><circle cx="132" cy="109" r="23"/>
+<circle cx="75" cy="139" r="23"/><circle cx="111" cy="144" r="23"/><circle cx="92" cy="171" r="19"/>
+</g>
+<g fill="#fff" opacity=".64"><ellipse cx="68" cy="53" rx="5" ry="3" transform="rotate(-28 68 53)"/><ellipse cx="108" cy="56" rx="5" ry="3" transform="rotate(-28 108 56)"/><ellipse cx="52" cy="92" rx="5" ry="3" transform="rotate(-28 52 92)"/><ellipse cx="92" cy="91" rx="5" ry="3" transform="rotate(-28 92 91)"/><ellipse cx="72" cy="130" rx="5" ry="3" transform="rotate(-28 72 130)"/><ellipse cx="88" cy="162" rx="4" ry="3" transform="rotate(-28 88 162)"/></g>
+</g>
+</svg>
