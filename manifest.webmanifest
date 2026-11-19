@@ -1,17 +1,31 @@
 {
- "name":"Unicorn Magic World",
- "short_name":"Unicorn Magic",
- "description":"Playful English numbers 0–20 and alphabet A–Z, with all six magical adventure worlds.",
- "id":"./",
- "start_url":"./",
- "scope":"./",
- "display":"standalone",
- "orientation":"portrait",
- "background_color":"#d9e9ff",
- "theme_color":"#b7dcff",
- "lang":"en",
- "icons":[
-   {"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
-   {"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
- ]
+  "name": "Unicorn Magic World",
+  "short_name": "Unicorn Magic",
+  "description": "Offline-ready preschool learning adventure for iPad, iPhone and Android. Numbers 0–20, letters A–Z, six worlds.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#d9e9ff",
+  "theme_color": "#b7dcff",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
 }

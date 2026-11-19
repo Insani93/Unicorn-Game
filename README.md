@@ -1,30 +1,33 @@
-# Unicorn Magic World — v6.2 (Samsung & iOS PWA)
+# Unicorn Magic World v6.2 — iPad + Samsung edition
 
-## What's new in v6.2
-- **No duplicate letter label beneath the main letter card.** Tap a letter and the same large card shows **uppercase G**, then **lowercase g**, then **Grapes** with an animated illustration. The shapes do **not** appear together.
-- English speech is **G → [pause] → G → [pause] → Grapes**. The wait is **1.5 seconds after each spoken word completes**, not from its start. The spoken letter name is the same for capital and lowercase; neither “letter” nor “number” is spoken as a prefix when touching the symbol.
-- Tap the main letter card again (including the final object card) to replay the whole sequence.
-- Number cards speak twice, wait 1.5 seconds each, then show and name the corresponding quantity. Counting individual stars reveals and lights a numeral as it is spoken.
-- **Positive, varied feedback** (Excellent!, Good job!, Amazing!, etc.) on correct quiz answers and completed counting, plus gentle encouragement and an optional highlighted answer after repeated difficulty.
-- **More lively but gentle ambience**: clouds drift, butterflies move, flowers sway, tiny sparkles, colored world backgrounds and animated Lulu scenes. Reduced motion system preference respected.
-- Existing Story Adventure (47 missions), Numbers 0–20, Alphabet A–Z, six musical worlds, approved Lulu PNGs, voice selection, English First + Indonesian Support, and local learning progress are retained.
+This is the **same full game as v6.2**, adjusted for iPad Safari and PWA Home Screen use. It retains six Adventure worlds, 47 missions, numbers 0–20, letters A–Z (capital followed by lowercase, shown one at a time), 1.5-second lesson pauses, six original musical themes, Lulu characters, supportive feedback, English First + Indonesian help and local progress.
 
-## Updating from Samsung — no laptop or paid subscription
-1. Download `Unicorn_Magic_World_Samsung_v6_2.zip` and **extract** it in **My Files**.
-2. Open your existing GitHub game repository from Chrome on Samsung. Sign in, select the publishing branch (normally `main`).
-3. Choose **Add file → Upload files** (enable Chrome Desktop site if necessary).
-4. Upload **the files inside the extracted folder**, not the ZIP itself. Keep `index.html`, `sw.js`, `manifest.webmanifest`, six Lulu PNG files, six MP3 files, `grape.svg`, `meadow.webp`, and both app icons **in the root of the repository**.
-5. If files have the same name/path, upload them using those exact names so GitHub replaces the earlier version. Then **Commit changes** to the branch used by GitHub Pages.
-6. Open the GitHub Pages URL online in Chrome and refresh. Then close/reopen the home-screen app. If an older version persists, refresh the GitHub Pages page again; service workers may take a little time to update. **Do not erase site data** as this may delete the child's locally stored progress.
+## What changed for iPad
+- Responsive **tablet layout** for portrait and landscape, using the full available iPad screen. Phone layout remains compact.
+- Larger touch targets, 2–3-column navigation grids and 6–7-column alphabet/number grids on tablets.
+- Home and Rainbow Meadow use side-by-side panels in iPad landscape; stacked layouts in portrait.
+- iPad Home Screen icon, standalone Apple web-app metadata, safe-area spacing and both orientations supported.
+- Apple touch devices start their first letter/number speech request from a **direct tap**, not after an artificial delay.
+- Service worker cache bumped so a previous install can update without wiping learning progress.
 
-## Test steps
-- Free Play → Alphabet → G: G large, then g, then Grapes illustration; no extra G under the large card. Tap the grapes illustration to repeat. Test A as well.
-- Free Play → Numbers → 3: tap three stars one at a time and watch 1, 2, 3 light up with corresponding audio, followed by variable praise.
-- Try a wrong answer in Find the letter → hear encouraging feedback; answer correctly → hear applause/praise.
-- Listen to the six different world themes; test Lulu's selected voice in Parent Corner → Voice Studio.
+## Install / update with the same GitHub Pages repository
+1. On Samsung (or a computer), extract **Unicorn_Magic_World_iPad_Android_v6_2.zip**.
+2. Open your existing GitHub repository, choose **Add file → Upload files**, and select **all the extracted files**, not the ZIP. Keep them in the same folder as the previous `index.html` (usually repository root), with exact names. This **replaces matching files** and adds the new `apple-touch-icon.png`.
+3. Commit directly to the same publishing branch (usually `main`). GitHub Pages will deploy the update; no new repository or fee is needed.
+4. On **iPad**, open your **existing GitHub Pages web address** in **Safari**. Once the new version appears, tap Safari's Share control → **Add to Home Screen**, switch on **Open as Web App** if offered, and tap **Add**.
+5. Open the new home-screen icon, tap **Play Adventure** or **Free Play** to start the music and voice. If an old copy was already installed on the iPad, reopen the site in Safari and refresh first. Don't clear website data just to refresh a build.
+6. On Samsung, update is the same as before: reopen your installed game after GitHub Pages deploys.
 
-## Notes
-- Game is free, no ads, no account, no online child-data collection.
-- Sound timbre still depends on voices installed on your Samsung; this release improves speech timing and visuals but **does not replace synthetic TTS with human recordings**.
-- The new background animations are CSS and work offline once game assets are cached. No online assets are required during play.
-- Some world scenes beyond Rainbow Meadow remain stylized/illustrative rather than fully illustrated final maps.
+## Test on iPad
+- Turn iPad to **portrait** and **landscape**. Home, World Map and Rainbow Meadow should adapt to the wider display and remain usable without horizontal scrolling.
+- Free Play → Alphabet → G → tap to hear **G → g → Grapes**, with the two letter forms displayed **one after the other**.
+- Free Play → Numbers → 3 → tap stars to count, and try a correct/incorrect quiz to hear supportive feedback.
+- Try world music and Parent Corner → Voice Studio. Safari can offer different system voices from Samsung; some may not be available offline. If Safari refuses to begin speech until a touch, tap the large letter/number or the 🔊 button again.
+- If music is silent, check the iPad volume and use the 🎵 control after opening the game; iPad Safari generally requires a user gesture before playing audio.
+
+## Important limitations
+- This is a **free web app (PWA)**, not an App Store `.ipa` file. It works through Safari's Add to Home Screen feature.
+- **Samsung and iPad do not share local progress automatically**; each device stores its own data unless sync is added later.
+- Audio uses built-in browser/device speech synthesis, not a human voice recording. Exact TTS timing, voices and simultaneous background music can vary by iPadOS version, especially if Safari interrupts background music during speech.
+- Source lives on GitHub Pages. A public GitHub Pages repository is not private; do not upload personal information about children.
+- All music and image assets are local and can be cached for offline play after opening successfully online.

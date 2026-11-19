@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#b7dcff">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Unicorn Magic">
-  <meta name="description" content="Six magical story worlds. Synchronized uppercase/lowercase, gentle feedback and magical animated learning.">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Unicorn Magic World v6.2 Tablet Edition for iPad and Android: six worlds, numbers 0–20, letters A–Z, gentle voices and music.">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/png" href="./icon-192.png">
-  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <title>Unicorn Magic World 🦄</title>
 <style>
 :root{font-family:'Trebuchet MS',Verdana,system-ui,sans-serif;color:#44266f;font-synthesis:none;-webkit-tap-highlight-color:transparent;--ink:#44266f;--purple:#7651c6;--pink:#f64ea2;--blue:#5493eb;--soft:#fff8ff;--border:rgba(131,83,198,.23)}
@@ -137,6 +138,99 @@
 @keyframes rewardFloat{0%{opacity:0;transform:translateY(70px) scale(.5)}36%{opacity:1}100%{opacity:0;transform:translateY(-140px) scale(1.18)}}
 @media(prefers-reduced-motion:reduce){.cloud,.butterfly,.flowerline,.world-scene img,.world-scene .world-icon,.world-scene::before,.count-pulse,.gentle-hint,.success-sparkles span,.alphabet-stage .lesson-object.reveal .objemoji,.alphabet-stage .lesson-object.reveal .grape-art{animation:none!important}}
 
+
+/* iPad/tablet edition: fluid tablet width, portrait + landscape, Safari safe areas. */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+button,select{-webkit-appearance:none;appearance:none}
+button{user-select:none;-webkit-user-select:none}
+@media (min-width:700px){
+ body{align-items:center;padding:0;min-height:100dvh}
+ .app{width:calc(100vw - 20px);max-width:1160px;margin:10px auto;height:calc(100dvh - 20px);min-height:0;border:5px solid rgba(255,255,255,.95);border-radius:28px;overflow:hidden}
+ .content{width:100%;padding:calc(env(safe-area-inset-top) + 14px) clamp(24px,3.5vw,48px) calc(env(safe-area-inset-bottom) + 28px);-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+ .topbar{min-height:65px;margin-bottom:16px;gap:12px}
+ .toplabel{font-size:clamp(21px,2.6vw,30px)}
+ .topbar .group{gap:10px}
+ .round{min-width:61px;height:61px;font-size:29px}
+ .round.music-button{min-width:59px;height:59px;font-size:25px}
+ .panel{padding:clamp(20px,2.4vw,30px);border-radius:30px}
+ .panel h2{font-size:clamp(24px,2.5vw,32px)}
+ .btn{min-height:66px;font-size:clamp(19px,2vw,24px);border-radius:22px}
+ .btn.sm{min-height:52px;font-size:16px}
+ .tilegrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+ .tile{min-height:160px;padding:16px 12px}
+ .tile .emoji{font-size:54px}
+ .tile .name{font-size:19px}
+ .tile .desc{font-size:14px}
+ .worldtile{min-height:184px}
+ .number-grid{grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+ .letter-grid{grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+ .number-grid .number,.letter-grid .letter{min-height:70px;font-size:30px}
+ .choicegrid{max-width:680px;margin:18px auto 8px;gap:16px}
+ .choicegrid .number,.choicegrid .letter{min-height:116px;font-size:60px}
+ .world-scene{min-height:165px;gap:20px;padding:20px}
+ .world-scene .world-icon{font-size:88px}
+ .world-scene .world-copy strong{font-size:27px}
+ .world-scene .world-copy span{font-size:16px}
+ .world-scene img{width:136px}
+ .missioncard{margin:7px auto 15px}
+ .missioncard h2{font-size:26px}
+ .missioncard .emoji{font-size:50px}
+ .prompt{max-width:780px;margin:12px auto;font-size:24px;padding:17px}
+ .object-area{max-width:820px;margin:14px auto;min-height:225px}
+ .starbtn{min-width:78px;min-height:78px;font-size:52px}
+ .counter-grid,.count-bunch{max-width:650px}
+ .count-bunch button{min-width:62px;width:62px;height:62px;font-size:32px}
+ .alphabet-stage{min-height:340px;max-width:500px}
+ .alphabet-stage .interactive-glyph{width:min(94%,410px);min-height:295px;font-size:150px!important}
+ .alphabet-stage .lesson-object.stage-word{min-height:306px}
+ .alphabet-stage .objemoji{font-size:125px}
+ .alphabet-stage .grape-art{width:190px;height:190px}
+ .lesson-animation-box{min-height:195px}
+ .lesson-numbers{max-width:470px;gap:5px}
+ .lesson-numbers span{font-size:29px;flex:0 0 36px}
+ .bigletter{font-size:145px}
+ .meadow-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:25px;align-items:center}
+ .meadow-layout .meadow-art{height:min(65vh,550px);margin:0;border-radius:28px}
+ .meadow-layout .panel{align-self:center}
+ .meadow-layout .panel .spaced{gap:16px}
+ .home-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:center;margin:clamp(18px,4vh,60px) auto 0;max-width:1030px}
+ .home-intro .title{font-size:clamp(36px,4.6vw,62px)}
+ .home-intro .hero{width:clamp(210px,30vw,360px);max-height:43vh;object-fit:contain}
+ .home-intro .tagline{font-size:clamp(15px,1.7vw,20px)}
+ .home-actions{padding:30px 22px;border:3px solid white;border-radius:32px;background:linear-gradient(#fffdfde8,#ffe7fbed);box-shadow:0 9px 0 #bd9ad055}
+ .home-actions .bottom-actions{max-width:410px;gap:20px;margin:0 auto}
+ .home-actions .footnote{font-size:14px}
+ #app[data-page="letter"] .content > .panel,#app[data-page="number"] .content > .panel,#app[data-page="parent"] .content > .panel,#app[data-page="gate"] .content > .panel{max-width:830px;margin-left:auto;margin-right:auto}
+ .speaker{min-height:50px;min-width:50px}
+ .caption{font-size:14px}.sub{font-size:16px}
+}
+@media (min-width:700px) and (orientation:portrait){
+ .home-layout{grid-template-columns:1fr;gap:12px;margin:4px auto 0;max-width:740px}
+ .home-intro .title{margin:4px auto;font-size:clamp(36px,6vw,54px)}
+ .home-intro .hero{width:min(35vw,290px);max-height:24vh;margin:0 auto}
+ .home-actions{padding:20px 24px;max-width:620px;width:100%;margin:auto}
+ .home-actions .bottom-actions{gap:12px;max-width:450px}
+ .meadow-layout{grid-template-columns:1fr;gap:15px;max-width:740px;margin:auto}
+ .meadow-layout .meadow-art{height:min(35vh,350px)}
+ .tilegrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .number-grid,.letter-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+}
+@media (min-width:700px) and (orientation:landscape) and (max-height:750px){
+ .content{padding-top:calc(env(safe-area-inset-top) + 9px)}
+ .home-layout{margin:0 auto}
+ .home-intro .hero{max-height:36vh;width:min(25vw,250px)}
+ .home-intro .title{font-size:clamp(32px,3.6vw,45px);margin:3px auto}
+ .home-actions{padding:16px}
+ .home-actions .bottom-actions{gap:11px}
+ .meadow-layout .meadow-art{height:clamp(270px,55vh,410px)}
+ .topbar{margin-bottom:8px;min-height:53px}
+ .round,.round.music-button{min-width:50px;height:50px;font-size:23px}
+ .alphabet-stage{min-height:260px}
+ .alphabet-stage .interactive-glyph{min-height:228px;font-size:112px!important}
+ .alphabet-stage .lesson-object.stage-word{min-height:238px}
+}
+@media (max-width:699px){.home-intro,.home-actions{width:100%}}
+
 </style>
 </head>
 <body>
@@ -244,9 +338,13 @@ function touchLesson(kind,key,onFinished){
 function numberChoices(n){return n===0?[1,0,2]:n===20?[19,20,18]:[n-1,n+1,n];}
 function letterChoices(i){return [ALPHA[(i+1)%26][0],ALPHA[i][0],ALPHA[(i+3)%26][0]];}
 let selectionPending=false;
+const isAppleTouch = /iPad|iPhone|iPod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
 function delayedSelection(el,fn,what){
  if(selectionPending)return;
  selectionPending=true;tapGlow(el);
+ // iPad Safari may require speech to begin within the original tap event.
+ // Avoid deferring the first SpeechSynthesis call with setTimeout on Apple touch devices.
+ if(isAppleTouch){selectionPending=false;fn();return;}
  setTimeout(()=>{selectionPending=false;fn();},260);
 }
 function extraMissionScreen(){
@@ -309,7 +407,7 @@ function startMusic(){
 function pauseMusic(){bgm.pause();}
 function toggleMusic(){data.music=!data.music;save();if(data.music)startMusic();else pauseMusic();render();toast(data.music?'🎵 Music on':'🎵 Music off');}
 function musicButton(){return `<button class="round secondary music-button ${data.music?'':'music-off'}" data-act="toggle-music" aria-label="Turn background music ${data.music?'off':'on'}" title="Background music ${data.music?'on':'off'}">${data.music?'🎵':'♪̸'}</button>`;}
-document.addEventListener('visibilitychange',()=>{if(document.hidden)pauseMusic();else if(musicActivated)startMusic();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseMusic();cancelTouchLesson();voiceSequence++;try{speechSynthesis.cancel()}catch(e){}voiceIsSpeaking=false;}else if(musicActivated)startMusic();});
 function seen(type,value){const field=type==='n'?'seenNum':'seenLetter';if(!data[field].includes(value)){data[field].push(value);save()}}
 let chosenWorld=0;
 let page='home',mission=-1,phase=0,round=0,picked=new Set(),doneRound=false,nSelected=0,countFree=new Set(),letterSelected=0,quizLetter=false,quizAnswered=false,wrong=0,lastEN='',lastID='',toastTimer=0;
@@ -328,7 +426,7 @@ function englishVoices(){
 function escaped(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
 function voicePicker(role,title){
  const selected=role==='lulu'?data.voiceLulu:data.voiceNarrator,voices=englishVoices();
- const options=`<option value="">Default Samsung / Chrome voice</option>`+voices.map(v=>`<option value="${escaped(voiceKey(v))}" ${selected===voiceKey(v)?'selected':''}>${escaped(v.name)} (${escaped(v.lang)})${v.localService?' • device':''}</option>`).join('');
+ const options=`<option value="">Default iPad / Android voice</option>`+voices.map(v=>`<option value="${escaped(voiceKey(v))}" ${selected===voiceKey(v)?'selected':''}>${escaped(v.name)} (${escaped(v.lang)})${v.localService?' • device':''}</option>`).join('');
  return `<label class="voice-profile-label" for="voice-${role}">${title}</label><select class="voice-picker" id="voice-${role}" data-voice-select="${role}">${options}</select><div class="voice-actions"><button data-act="voice-test" data-role="${role}">🔊 Test ${role==='lulu'?'Lulu':'Narrator'}</button><button class="${data.voiceProfile===role?'active':''}" data-act="voice-activate" data-role="${role}">${data.voiceProfile===role?'✓ Active voice':'Use this voice'}</button></div>`;
 }
 function speak(msg,lang='en-US',overrideProfile='',onComplete=null,isLesson=false){
@@ -414,8 +512,8 @@ function tryAgain(){
 function btn(act,text,cls='pink',attrs=''){return `<button class="btn ${cls}" data-act="${act}" ${attrs}>${text}</button>`}
 function go(where){cancelTouchLesson();if(where==='missions'&&page==='meadow')chosenWorld=0;if(!['number','letter','mission','missions','reward'].includes(where))chooseWorldMusic(0);if(where==='missions')chooseWorldMusic(chosenWorld);page=where;wrong=0;quizLetter=false;render()}
 function render(){switch(page){case 'home':home();break;case 'meadow':meadow();break;case 'worlds':worlds();break;case 'missions':missions();break;case 'mission':missionScreen();break;case 'reward':reward();break;case 'free':free();break;case 'numbers':numbers();break;case 'number':numberDetail();break;case 'letters':letters();break;case 'letter':letterDetail();break;case 'collection':collection();break;case 'gate':gate();break;case 'parent':parent();break;default:home()}}
-function home(){tell('Hello, little friend! Come play with Lulu!','Halo teman kecil! Yuk bermain bersama Lulu!');setScreen(`<div class="topbar"><span class="pill">✨ Ages 3+</span><div class="group">${musicButton()}<button class="round" data-act="go" data-to="gate" aria-label="Parent Corner">⚙</button></div></div><div class="center"><h1 class="title">🦄 Unicorn<br>Magic World</h1><div class="tagline">ABC • 0–20 • A magical adventure!</div>${lulu.replace('src="./lulu_happy.png"','src="./lulu_encouraging.png"')}<div class="bottom-actions">${btn('go','▶ Play Adventure','', 'data-to="meadow"')}${btn('go','🎮 Free Play','blue stretch','data-to="free"')}${btn('go','📖 My Collection','purple stretch','data-to="collection"')}</div><p class="footnote">💗 No ads · No account · Learn through play</p></div>`)}
-function meadow(){tell('Welcome to Rainbow Meadow! Let’s play!','Selamat datang di Rainbow Meadow! Pilih petualangan atau bermain bebas.');setScreen(head('Rainbow Meadow')+`<div class="meadow-art"><span class="floatlulu">${lulu.replace('class="hero"','class="hero tiny"').replace('src="./lulu_happy.png"','src="./lulu_curious.png"')}</span></div><div class="panel"><h2 class="center">🌈 Hello, little friend!</h2><p class="sub center">The rainbow needs your magic! Help Lulu collect stars and letter gems.</p><div class="spaced">${btn('go','✨ Story Adventure','stretch','data-to="missions"')}${btn('go','🎈 Explore & Free Play','blue stretch','data-to="free"')}${btn('go','🗺️ Explore All Worlds','purple stretch','data-to="worlds"')}</div><p class="caption center" style="margin:15px 0 0">🎵 Each world has its own sing-along theme · Tap 🎵 to turn it on/off<br>English first · Tap 🔊 to listen · Tap ID for help</p></div>`)}
+function home(){tell('Hello, little friend! Come play with Lulu!','Halo teman kecil! Yuk bermain bersama Lulu!');setScreen(`<div class="topbar"><span class="pill">✨ Ages 3+</span><div class="group">${musicButton()}<button class="round" data-act="go" data-to="gate" aria-label="Parent Corner">⚙</button></div></div><div class="center home-layout"><div class="home-intro"><h1 class="title">🦄 Unicorn<br>Magic World</h1><div class="tagline">ABC • 0–20 • A magical adventure!</div>${lulu.replace('src="./lulu_happy.png"','src="./lulu_encouraging.png"')}</div><div class="home-actions"><div class="bottom-actions">${btn('go','▶ Play Adventure','', 'data-to="meadow"')}${btn('go','🎮 Free Play','blue stretch','data-to="free"')}${btn('go','📖 My Collection','purple stretch','data-to="collection"')}</div><p class="footnote">💗 No ads · No account · Learn through play</p></div></div>`)}
+function meadow(){tell('Welcome to Rainbow Meadow! Let’s play!','Selamat datang di Rainbow Meadow! Pilih petualangan atau bermain bebas.');setScreen(head('Rainbow Meadow')+`<div class="meadow-layout"><div class="meadow-art"><span class="floatlulu">${lulu.replace('class="hero"','class="hero tiny"').replace('src="./lulu_happy.png"','src="./lulu_curious.png"')}</span></div><div class="panel"><h2 class="center">🌈 Hello, little friend!</h2><p class="sub center">The rainbow needs your magic! Help Lulu collect stars and letter gems.</p><div class="spaced">${btn('go','✨ Story Adventure','stretch','data-to="missions"')}${btn('go','🎈 Explore & Free Play','blue stretch','data-to="free"')}${btn('go','🗺️ Explore All Worlds','purple stretch','data-to="worlds"')}</div><p class="caption center" style="margin:15px 0 0">🎵 Each world has its own sing-along theme · Tap 🎵 to turn it on/off<br>English first · Tap 🔊 to listen · Tap ID for help</p></div></div>`)}
 function worlds(){tell('Choose a magical world!','Pilih dunia yang ingin dimainkan. Semua world tersedia.');setScreen(head('Choose a World','meadow')+banner('🌈 Six magical worlds')+`<div class="tilegrid">${WORLDS.map((w,i)=>{const ids=missionsForWorld(i),done=ids.filter(j=>data.done.includes(j)).length;return `<div class="world-block"><button class="tile worldtile ${done===ids.length?'done':''}" data-act="world" data-world="${i}"><span class="emoji">${w[1]}</span><span class="name">${i+1}. ${w[0]}</span><span class="desc">${w[2]}</span><span class="badge ${done===ids.length?'green':''}">${done}/${ids.length} missions</span></button><button class="world-listen" data-act="preview-theme" data-world="${i}" aria-label="Hear music for ${w[0]}">🎵 Hear theme</button></div>`}).join('')}</div><p class="footnote">✨ All six worlds are playable. No levels are locked. Choose any adventure or listen to its music.</p>`)}
 function missions(){const ids=missionsForWorld(chosenWorld),done=ids.filter(j=>data.done.includes(j)).length;tell(`Welcome to ${WORLDS[chosenWorld][0]}! Choose a little adventure.`,WORLD_ID_STORY[chosenWorld]);setScreen(head('Story Adventure','worlds')+sceneForWorld(chosenWorld)+banner(`✨ ${done} / ${ids.length} missions completed`)+`<div class="tilegrid">${ids.map(i=>{const m=STORY_MISSIONS[i];return `<button class="tile ${data.done.includes(i)?'done':''}" data-act="mission" data-n="${i}"><span class="emoji">${m[2]}</span><span class="name">${m[1]}</span><span class="desc">${m[3]}</span>${data.done.includes(i)?'<span class="badge green">✓ Completed</span>':'<span class="badge">Play ▶</span>'}</button>`}).join('')}</div><p class="footnote">🎵 This world has its own music. You can replay any mission, with no time limit.</p>`)}
 function missionStart(i){cancelTouchLesson();if(i<0||i>=STORY_MISSIONS.length)return;mission=i;chosenWorld=missionWorld(i);chooseWorldMusic(chosenWorld);phase=0;round=0;picked=new Set();doneRound=false;wrong=0;page='mission';missionScreen();const intro=i<6?['Let’s wake up three little stars!','Help Lulu build a rainbow bridge!','Let’s fill the cloud basket!','A is for Apple.','B is for Ball.','C is for Cat.'][i]:EXTRAS[i-6].kind==='number'?`Let's discover number ${WORDS[EXTRAS[i-6].target]}!`:`Let's discover letter ${ALPHA[EXTRAS[i-6].target][0]}!`;tell(intro,STORY_MISSIONS[i][4]);speak(intro)}
@@ -437,7 +535,7 @@ function letters(){tell('Choose a letter from A to Z!','Pilih huruf A sampai Z.'
 function letterDetail(){const [l,w,emoji,indo]=ALPHA[letterSelected];seen('a',l);tell(`${l}. ${l}. ${w}!`,`Ini huruf ${l}. ${w} artinya ${indo}.`);const index=letterSelected, options=[ALPHA[(index+1)%26][0],l,ALPHA[(index+3)%26][0]];setScreen(head(`Letter ${l}`,'letters')+`<div class="panel center"><div class="eyebrow">MAGIC ALPHABET</div><div class="alphabet-stage"><button class="bigletter interactive-glyph" data-act="tap-letter" data-lesson-focus="1" aria-label="Hear ${l}"><span class="glyph-symbol">${l}</span><span class="glyph-caption">👆 Tap & listen</span></button><button id="lesson-object" class="lesson-object stage-word is-hidden" data-act="tap-letter" aria-label="Repeat learning ${l}">${itemArt(l)}<span class="objword">${w}</span></button></div><div class="music-world-hint">🎵 ${WORLDS[worldForLetter(letterSelected)][0]} theme</div><div id="lesson-status" class="lesson-status">Tap to hear the letter, then see ${w}.</div>${quizLetter?`<div class="prompt">Find the letter ${l}!</div><div class="choicegrid">${options.map(x=>`<button class="letter" data-act="quiz-letter" data-letter="${x}">${x}</button>`).join('')}</div>${quizAnswered?`<div class="flash">✨ ${POSITIVE_PHRASES[lastPositive]||'Well done!'}</div>`:''}`:btn('start-letter-quiz','✨ Find the letter!','stretch')}<div class="gap"></div>${btn('word-speak','🔊 Hear the word','blue stretch')}${data.idHelp?btn('help','🇮🇩 Bantuan','cream stretch'):''}</div>`)}
 function collection(){const total=data.done.length;const all=STORY_MISSIONS.length;tell('Look at your magic collection!','Lihat koleksi hadiah dari petualanganmu.');setScreen(head('My Collection','home')+banner('📖 Lulu’s Magic Collection')+`<div class="panel"><h2 class="center">${total} / ${all} Magic Adventures</h2><div class="progressline"><div style="width:${total/all*100}%"></div></div><div class="tilegrid" style="margin-top:18px">${WORLDS.map((w,i)=>{const ids=missionsForWorld(i),done=ids.filter(j=>data.done.includes(j)).length;return `<button class="tile" data-act="world" data-world="${i}"><span class="emoji">${w[1]}</span><span class="name">${w[0]}</span><span class="desc">${done}/${ids.length} adventures completed</span></button>`}).join('')}</div><p class="sub center">Every completed mission earns a star or gem. All missions can be replayed.</p></div><div class="gap"></div><div class="panel"><h3>🔢 Numbers explored: ${data.seenNum.length}/21</h3><div class="progressline"><div style="width:${data.seenNum.length/21*100}%"></div></div><div class="gap"></div><h3>🔤 Letters explored: ${data.seenLetter.length}/26</h3><div class="progressline"><div style="width:${data.seenLetter.length/26*100}%"></div></div><p class="caption">Explored means opened or played; it does not mean mastered. Your previous progress is kept.</p></div><div class="gap"></div>${btn('go','🎮 Let’s Play!','stretch','data-to="free"')}`)}
 function gate(){tell('Parent corner. Please ask a grown-up.','Bagian khusus orang tua. Pilih jawaban untuk masuk.');setScreen(head('For Grown-ups')+`<div class="panel center" style="margin-top:40px"><div style="font-size:62px">👨‍👩‍👧</div><h2>Parent Corner</h2><p class="sub">For a grown-up: what is 3 + 4?</p><div class="choicegrid">${[6,8,7].map(n=>`<button class="number" data-act="parent-answer" data-n="${n}">${n}</button>`).join('')}</div></div>`)}
-function parent(){tell('Welcome, grown-up. Here are your game settings.','Pengaturan orang tua.');setScreen(head('Parent Corner','home')+`<div class="panel"><h2>⚙️ Learning Settings</h2><p class="sub">English is always the main learning language. Indonesian is optional help when the ID button is tapped.</p><button class="parent-option" data-act="toggle-id"><span>🇮🇩 Indonesian support<br><span class="caption">Show optional ID help button</span></span><span class="switch ${data.idHelp?'on':''}"></span></button><button class="parent-option" data-act="toggle-sound"><span>🔊 Voice & sound effects<br><span class="caption">English narration and celebration sounds</span></span><span class="switch ${data.sound?'on':''}"></span></button><button class="parent-option" data-act="toggle-music"><span>🎵 Background music<br><span class="caption">Six original sing-along style themes, one per world</span></span><span class="switch ${data.music?'on':''}"></span></button><p class="sub">Music volume (independent from voice):</p><div class="row wrap" style="justify-content:center">${[1,2,3].map((v,i)=>`<button class="btn sm ${data.musicVolume===v?'purple':'cream'}" data-act="music-volume" data-n="${v}">${['Soft','Normal','Louder'][i]}</button>`).join('')}</div><div class="voice-settings"><h2>🎙 Voice Studio</h2><p>Try English voices installed on this Samsung. Choose by listening: voice names do not reliably show male/female. These are device-generated voices, not human recordings. Tap-to-learn speaks twice, with a 1.5-second pause after each utterance, then says the object's name.</p>${voicePicker('lulu','🦄 Lulu — choose a female-sounding voice')}${voicePicker('narrator','📖 Narrator — choose a male-sounding voice')}<div class="voice-actions"><button data-act="voice-refresh">↻ Refresh voices</button></div><p class="voice-info">${englishVoices().length} English voice(s) detected. If zero, Chrome uses its default. Some voices need language packs or internet.</p><p class="sub">Narration speed:</p><div class="voice-actions">${[['0.88','Gentle'],['0.94','Natural'],['1.02','Lively']].map(([rate,name])=>`<button class="${data.voiceRate===rate?'active':''}" data-act="voice-rate" data-rate="${rate}">${name}</button>`).join('')}</div></div><div class="gap"></div><h2>📊 Learning Journey</h2><p class="sub">${data.done.length}/${STORY_MISSIONS.length} adventures completed<br>${data.seenNum.length}/21 numbers explored<br>${data.seenLetter.length}/26 letters explored</p><div class="gap"></div>${btn('confirm-reset','🗑 Reset local progress','cream stretch')}<p class="caption">Only data in this browser is stored. No account, ads or analytics. Clearing browser storage also clears progress.</p></div>`)}
+function parent(){tell('Welcome, grown-up. Here are your game settings.','Pengaturan orang tua.');setScreen(head('Parent Corner','home')+`<div class="panel"><h2>⚙️ Learning Settings</h2><p class="sub">English is always the main learning language. Indonesian is optional help when the ID button is tapped.</p><button class="parent-option" data-act="toggle-id"><span>🇮🇩 Indonesian support<br><span class="caption">Show optional ID help button</span></span><span class="switch ${data.idHelp?'on':''}"></span></button><button class="parent-option" data-act="toggle-sound"><span>🔊 Voice & sound effects<br><span class="caption">English narration and celebration sounds</span></span><span class="switch ${data.sound?'on':''}"></span></button><button class="parent-option" data-act="toggle-music"><span>🎵 Background music<br><span class="caption">Six original sing-along style themes, one per world</span></span><span class="switch ${data.music?'on':''}"></span></button><p class="sub">Music volume (independent from voice):</p><div class="row wrap" style="justify-content:center">${[1,2,3].map((v,i)=>`<button class="btn sm ${data.musicVolume===v?'purple':'cream'}" data-act="music-volume" data-n="${v}">${['Soft','Normal','Louder'][i]}</button>`).join('')}</div><div class="voice-settings"><h2>🎙 Voice Studio</h2><p>Try English voices available on this device. Choose by listening: voice names do not reliably show male/female. These are device-generated voices, not human recordings. Tap-to-learn speaks twice, with a 1.5-second pause after each utterance, then says the object's name.</p>${voicePicker('lulu','🦄 Lulu — choose a female-sounding voice')}${voicePicker('narrator','📖 Narrator — choose a male-sounding voice')}<div class="voice-actions"><button data-act="voice-refresh">↻ Refresh voices</button></div><p class="voice-info">${englishVoices().length} English voice(s) detected. If zero, Chrome uses its default. On iPad Safari, voice options may differ and some need downloaded language voices. Tap Test to listen.</p><p class="sub">Narration speed:</p><div class="voice-actions">${[['0.88','Gentle'],['0.94','Natural'],['1.02','Lively']].map(([rate,name])=>`<button class="${data.voiceRate===rate?'active':''}" data-act="voice-rate" data-rate="${rate}">${name}</button>`).join('')}</div></div><div class="gap"></div><h2>📊 Learning Journey</h2><p class="sub">${data.done.length}/${STORY_MISSIONS.length} adventures completed<br>${data.seenNum.length}/21 numbers explored<br>${data.seenLetter.length}/26 letters explored</p><div class="gap"></div>${btn('confirm-reset','🗑 Reset local progress','cream stretch')}<p class="caption">Only data in this browser is stored. No account, ads or analytics. Clearing browser storage also clears progress.</p></div>`)}
 function nextRound(){doneRound=false;round++;picked=new Set();wrong=0;if(round>=3)finishMission();else{missionScreen();const t=mission===1?WORDS[[2,1,3][round]]:mission===2?WORDS[[1,2,3][round]]:['Cat','Apple','Ball'][round];speak(`Let's try ${t}!`)}}
 function handle(el){const a=el.dataset.act;if(!a)return;switch(a){case 'toggle-music':toggleMusic();break;case 'music-volume':data.musicVolume=+el.dataset.n;save();setMusicLevel(voiceIsSpeaking);if(data.music)startMusic();parent();toast('🎵 Music volume updated');break;case 'go':go(el.dataset.to);if(page==='meadow')speak(lastEN);break;case 'repeat':if(page==='letter')touchLesson('letter',ALPHA[letterSelected][0]);else if(page==='number')touchLesson('number',nSelected);else speak(lastEN);if(!('speechSynthesis' in window))toast('Speech may not be available on this browser.');break;case 'help':if(data.idHelp){toast('🇮🇩 '+lastID);speak(lastID,'id-ID')}break;case 'world':chosenWorld=+el.dataset.world;chooseWorldMusic(chosenWorld);go('missions');break;case 'preview-theme':{const w=+el.dataset.world;if(!data.music){toast('🎵 Turn on music to hear the theme.');break;}chooseWorldMusic(w);startMusic();toast('🎵 '+WORLDS[w][0]+' theme');break;}case 'mission':missionStart(+el.dataset.n);break;case 'wake':{const i=+el.dataset.n;if(picked.has(i))return;picked.add(i);seen('n',picked.size);sound();missionScreen();showCountingFeedback(picked.size);if(picked.size===3){speak(WORDS[picked.size],'en-US','',()=>{if(page==='mission'&&mission===0)finishMission();});}else speak(WORDS[picked.size]);break}
 case 'choose-count':{const tgt=[2,1,3][round];if(+el.dataset.n===tgt){seen('n',tgt);doneRound=true;good(`${WORDS[tgt]} stars!`);missionScreen()}else tryAgain();break}
@@ -472,7 +570,7 @@ case 'extra-choice-letter':{
 case 'voice-test':{if(!data.sound){toast('Turn on Voice & sound effects first.');break;}const role=el.dataset.role;speak(role==='lulu'?"Hello, little friend! Let's count together. One, two, three!":"Welcome to the magic world! Ready for an adventure?",'en-US',role);break;}
 case 'voice-activate':data.voiceProfile=el.dataset.role;save();parent();toast('Voice changed. Press Test to listen!');break;
 case 'voice-rate':data.voiceRate=el.dataset.rate;save();parent();toast('Narration speed changed');break;
-case 'voice-refresh':parent();toast('Checked Samsung voices');break;
+case 'voice-refresh':parent();toast('Checked available voices');break;
 case 'parent-answer':if(+el.dataset.n===7)go('parent');else toast('Ask a grown-up to help.');break;case 'toggle-id':data.idHelp=!data.idHelp;save();parent();break;case 'toggle-sound':data.sound=!data.sound;if(!data.sound){cancelTouchLesson();voiceIsSpeaking=false;voiceSequence++;try{speechSynthesis.cancel()}catch(e){}setMusicLevel(false);}save();parent();break;case 'confirm-reset':if(window.confirm('Reset all locally saved game progress?')){data.done=[];data.seenNum=[];data.seenLetter=[];save();parent();toast('Progress reset.')}break;default:break}}
 root.addEventListener('change',ev=>{const el=ev.target.closest('select[data-voice-select]');if(!el)return;
  const role=el.dataset.voiceSelect;
