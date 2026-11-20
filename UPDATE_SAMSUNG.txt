@@ -1,1 +1,1 @@
-Update v6.2: Extract ZIP → GitHub repository root → Add file → Upload files (replace same names) → Commit changes on main → reopen GitHub Pages online, refresh and relaunch app. Do not clear site data.
+Update: upload every extracted file from this ZIP to the same GitHub Pages repository root. Replace matching files, including index.html and sw.js, and upload new voice_fallback.mp3. Do not clear local website data. Open Safari on iPad and tap Mulai dengan Suara.

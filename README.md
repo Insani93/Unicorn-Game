@@ -1,33 +1,18 @@
-# Unicorn Magic World v6.2 — iPad + Samsung edition
+# Unicorn Magic World — iPad Audio Fix v6.2.1
 
-This is the **same full game as v6.2**, adjusted for iPad Safari and PWA Home Screen use. It retains six Adventure worlds, 47 missions, numbers 0–20, letters A–Z (capital followed by lowercase, shown one at a time), 1.5-second lesson pauses, six original musical themes, Lulu characters, supportive feedback, English First + Indonesian help and local progress.
+This hotfix addresses silent audio on iPad Safari by requiring a one-time **Tap to Enable Sound** button and providing an **offline backup voice** (English letters A–Z, numbers 0–20, vocabulary, correct-answer encouragement, and key quiz prompts). The backup is synthetic and less natural than premium native voices, but does not require internet or an app-store purchase. Six background-music themes remain included.
 
-## What changed for iPad
-- Responsive **tablet layout** for portrait and landscape, using the full available iPad screen. Phone layout remains compact.
-- Larger touch targets, 2–3-column navigation grids and 6–7-column alphabet/number grids on tablets.
-- Home and Rainbow Meadow use side-by-side panels in iPad landscape; stacked layouts in portrait.
-- iPad Home Screen icon, standalone Apple web-app metadata, safe-area spacing and both orientations supported.
-- Apple touch devices start their first letter/number speech request from a **direct tap**, not after an artificial delay.
-- Service worker cache bumped so a previous install can update without wiping learning progress.
+## Updating via Samsung / GitHub
+1. Unzip this project. Upload **all** files including the new `voice_fallback.mp3` to the existing GitHub Pages repository, next to `index.html`, and commit to the published branch.
+2. Refresh the website in Safari on your iPad. If an old Home Screen PWA remains cached, first reload the Safari tab and then re-open the installed shortcut.
+3. When the game opens, tap **Aktifkan Suara Lulu → Mulai dengan Suara**. The tap unlocks Safari playback and immediately plays a short spoken preview. Turn up iPad volume.
+4. Test Alphabet → G (G → g → Grapes), Numbers → 3, and the 🎵 button. If wanted, compare audio in Parent Corner → iPad Audio Mode → **Offline voice** vs **iPad Natural Voice**.
+5. Avoid clearing Safari website data: it may erase local progress.
 
-## Install / update with the same GitHub Pages repository
-1. On Samsung (or a computer), extract **Unicorn_Magic_World_iPad_Android_v6_2.zip**.
-2. Open your existing GitHub repository, choose **Add file → Upload files**, and select **all the extracted files**, not the ZIP. Keep them in the same folder as the previous `index.html` (usually repository root), with exact names. This **replaces matching files** and adds the new `apple-touch-icon.png`.
-3. Commit directly to the same publishing branch (usually `main`). GitHub Pages will deploy the update; no new repository or fee is needed.
-4. On **iPad**, open your **existing GitHub Pages web address** in **Safari**. Once the new version appears, tap Safari's Share control → **Add to Home Screen**, switch on **Open as Web App** if offered, and tap **Add**.
-5. Open the new home-screen icon, tap **Play Adventure** or **Free Play** to start the music and voice. If an old copy was already installed on the iPad, reopen the site in Safari and refresh first. Don't clear website data just to refresh a build.
-6. On Samsung, update is the same as before: reopen your installed game after GitHub Pages deploys.
+If music is audible but speech is not, select Offline voice. If neither is audible, check volume, silent mode, Bluetooth output, mute options, and whether the Safari tab itself is muted. Try opening the link directly in Safari (not an in-app browser) and tap the audio-start button again.
 
-## Test on iPad
-- Turn iPad to **portrait** and **landscape**. Home, World Map and Rainbow Meadow should adapt to the wider display and remain usable without horizontal scrolling.
-- Free Play → Alphabet → G → tap to hear **G → g → Grapes**, with the two letter forms displayed **one after the other**.
-- Free Play → Numbers → 3 → tap stars to count, and try a correct/incorrect quiz to hear supportive feedback.
-- Try world music and Parent Corner → Voice Studio. Safari can offer different system voices from Samsung; some may not be available offline. If Safari refuses to begin speech until a touch, tap the large letter/number or the 🔊 button again.
-- If music is silent, check the iPad volume and use the 🎵 control after opening the game; iPad Safari generally requires a user gesture before playing audio.
+## Maintained
+47 adventures, 0–20, A–Z, capital→lowercase one at a time, 1.5-second lessons, dynamic backgrounds, six music themes, local progress, Android layout. On Android, native speech remains the default.
 
-## Important limitations
-- This is a **free web app (PWA)**, not an App Store `.ipa` file. It works through Safari's Add to Home Screen feature.
-- **Samsung and iPad do not share local progress automatically**; each device stores its own data unless sync is added later.
-- Audio uses built-in browser/device speech synthesis, not a human voice recording. Exact TTS timing, voices and simultaneous background music can vary by iPadOS version, especially if Safari interrupts background music during speech.
-- Source lives on GitHub Pages. A public GitHub Pages repository is not private; do not upload personal information about children.
-- All music and image assets are local and can be cached for offline play after opening successfully online.
+## Limitations
+This change was checked with a browser simulator; Safari on a physical iPad must still be tested. eSpeak-generated offline backup speech sounds more synthetic than a human voice. Not all free-form story lines have prerecorded backup clips and may still use Safari TTS. No server or personal data collection.
